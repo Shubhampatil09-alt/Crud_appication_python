@@ -51,6 +51,8 @@ def update_data(request, id):
 
 """
 This Functionsis detele the record if requested ID. and redirect to the same page.
+method: POST
+return: Redirect to same  page.
 """
 def delete_data(request, id):
     if request.method =='POST':
