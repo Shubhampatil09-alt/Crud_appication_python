@@ -5,7 +5,7 @@ from .models import User
 
 # Create your views here.
 """
-This function for add and show data.
+This function for add and show the data on same page.
 """
 def add_show(request):
     if request.method == 'POST':
@@ -23,7 +23,14 @@ def add_show(request):
     print("----!@#$%^&*()--")
     return render (request, 'addandshow.html', {'form':fm, 'stu':stud})
 
+"""
+Update student data.
+get the requested data and id, 
+if the method is Get return the requested Id data. else update the data into sqlite Database.
 
+Input parameters: request and Id.
+output parameters: Save the data into the database. sqlite
+"""
 def update_data(request, id):
     if request.method == 'POST':
         print("-------=============-----------")
@@ -43,8 +50,7 @@ def update_data(request, id):
  
 
 """
-
-This function is delele data
+This Functionsis detele the record if requested ID. and redirect to the same page.
 """
 def delete_data(request, id):
     if request.method =='POST':
