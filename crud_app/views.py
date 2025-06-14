@@ -37,7 +37,7 @@ def update_data(request, id):
         pi = User.objects.get(pk=id)
         fm = StudentRegistration(request.POST, instance=pi)
         if fm.is_valid():
-            print("###############################################################")
+            print("is validddddd")
             fm.save()
 
     else:
